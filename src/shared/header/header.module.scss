@@ -1,0 +1,27 @@
+
+
+.header{
+    display: flex;  
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    svg{
+        width: 65px;
+        height: 65px;
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    color: #4793FF;
+}
