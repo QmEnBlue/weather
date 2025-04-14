@@ -1,19 +1,22 @@
 import { Route, Routes } from "react-router";
 import { Home } from "./pages/Home/Home";
-import { MonthStatistics } from "./pages/MonthStatistics/Components/MonthStatistics";
 import { Header } from "./shared/header/header";
+import { Popup } from "./shared/Popup/Popup";
 
 import './styles/index.scss';
 
 export default function App() {
+  
   return(
+    <>
+    <Popup/>
     <div className="container">
-      <Header/>
+      <Header />
       <Routes>
-        <Route path="/" Component={Home}/>
-        <Route path="/month-statistics" Component={MonthStatistics} /> 
+        <Route path="/" Component={Home}/> 
       </Routes>  
     </div>
+    </>
   )
 }
 

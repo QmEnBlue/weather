@@ -1,0 +1,71 @@
+@import "../../../../styles/variables.scss";
+
+@media (min-width: 1024px){
+    .this__day__info{
+        max-width: 700px;
+        width: 100%;
+    }
+    .indicator__name, .indicator__value{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1023px){
+    .this__day__info{
+        width: 90vw;
+    }
+    .indicator__name, .indicator__value{
+        font-size: 14px;
+    }
+    .cloud__img{
+        display: none;
+    }
+}
+
+.this__day__info{
+    position: relative;
+    padding: 40px;
+    background: var(#{--components-background-default});
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    z-index: 2;
+    &:late-of-type{
+        margin-bottom: 0;
+    }
+    .indicator, .indicator__name {
+        margin-right: 20px;
+    }
+
+    .indicator {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+    }
+
+    .indicator__name {
+        color: $base-color 
+    }
+
+    .indicator__value {
+        color: var(#{--text-color-default});
+    }
+}
+
+.cloud__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: $border-radius;
+    z-index: 1;
+}

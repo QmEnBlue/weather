@@ -1,3 +1,25 @@
-.home{ 
-    font-size: 30px;
+@media (min-width: 1024px){
+        .wrapper{
+                display: flex;
+        }
+}
+    
+@media (max-width: 1023px){
+        .home{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        .wrapper{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+        }
+}
+
+.wrapper {
+        justify-content: space-between;
+        margin-bottom: 50px;
 }

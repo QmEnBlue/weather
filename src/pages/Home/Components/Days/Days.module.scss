@@ -1,0 +1,115 @@
+@import "../../../../styles/variables.scss";
+
+@media (min-width: 1024px){
+    .days{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .days{
+        width: 90vh;
+    }
+}
+
+.days{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: var(#{--components-background-default});
+    box-shadow: $box-shadow;
+    border-radius: 0 0 $border-radius $border-radius;
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(#{--card-shadow-default});
+    background: var(#{--card-background-default});
+    padding: 10px;
+    border-radius: 10px;
+    width: 149px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    .day, .temp__day {
+        color: var(#{--text-color-default});
+    } 
+
+    .temp__night, .info {
+        font-size: 13px;
+        color: $base-color;
+    }
+
+    .day {
+        margin-bottom: 7px;
+        font-size: 18px;
+    }
+
+    .day__info {
+        font-size: 14px;
+        margin-bottom: 12px;
+        color: $base-color;
+    }
+
+    .img {
+        margin-bottom: 12px;
+    }
+
+    .temp__day {
+        font-size: 18px;
+    }
+
+    .temp__night {
+        margin-bottom: 6px;
+    }
+
+    &:hover {
+        box-shadow: 0px 3px 20px rgba(147, 144, 144, 0.28);
+        transform: scale(1.02);
+    }
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 7px;
+    display: none;
+}
+
+.tabs__wrapper{
+    display: flex;
+}
+
+.tab{
+    &:hover{
+        color: #fff;
+        background: $primary-color;
+    }
+}
+
+.cancel, .tab {
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 5px;
+    padding: 9px 20px;
+    background: var(#{--components-background-default});
+    margin-right: 15px;
+    color: var(#{--text-color-default});
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cancel {
+    margin-right: 0;
+    &:hover{
+        color: #fff;
+        background-color: rgb(120, 0, 0);
+    }
+}
+

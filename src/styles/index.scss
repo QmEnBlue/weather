@@ -2,12 +2,32 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@media (min-width: 1024px){
+    body {
+        padding-top: 20vh;
+    }
+}
+
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+    transition: 0.2s;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 body{
     font-family: "Montserrat", sans-serif;
+    position: relative;
+    background: var(#{--body-background-default});
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1200px;  
     margin: 0 auto;
     padding: 20px;
 }

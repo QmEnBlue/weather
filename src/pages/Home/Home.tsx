@@ -1,16 +1,19 @@
-import React from 'react';
-
 import s from "./Home.module.scss";
-import { ThisDay } from './Components/thisDay/thisDay';
 import { ThisDayInfo } from './Components/thisDayInfo/thisDayInfo';
+import { Days } from "./Components/Days/Days";
+import { ThisDay } from "./Components/thisDay/thisDay";
+import { useCustomSelector } from "../../hooks/store";
+import { selectCurrentWeatherData } from "../../store/selectors";
 
-type Props = {}
-
-export const Home = (props: Props) => {
+export const Home = () => {
+  const {weather} = useCustomSelector(selectCurrentWeatherData)
   return (
     <div className={s.home}>
-      <ThisDay/>
-      <ThisDayInfo/>
+      <div className={s.wrapper}>
+        <ThisDay weather={weather}/>
+        <ThisDayInfo/>
+      </div>
+      <Days />
     </div>
   )
 }

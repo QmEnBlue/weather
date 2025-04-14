@@ -1,10 +1,25 @@
-
-
-.header{
-    display: flex;  
-    justify-content: space-between;
-    width: 100%;
+@media (min-width: 1024px){
+    .header {
+        display: flex;
+      }
 }
+
+@media (max-width: 1023px){
+    .header {
+        display: grid;
+        grid-gap: 10px;
+        place-self: center;
+    }
+
+    .wrapper {
+        justify-content: center;
+    }
+}
+
+.header {
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
 
 .wrapper{
     display: flex;
@@ -24,4 +39,8 @@
     font-weight: bold;
     font-size: 30px;
     color: #4793FF;
+}
+
+.change_theme {
+    cursor: pointer;
 }
