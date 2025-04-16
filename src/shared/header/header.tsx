@@ -106,7 +106,7 @@ export const Header = () => {
     <header className={s.header}>
         <div className={s.wrapper}>
           <div className={s.logo}><GlobalSvgSelect id="header-logo"/></div>
-          <div className={s.title}>Sky Weather</div>
+          <div className={s.title}>React Weather</div>
         </div>
         <div className={s.wrapper}>
           <div className={s.change_theme} onClick={() => {

@@ -1,7 +1,11 @@
 @media (min-width: 1024px){
     .header {
         display: flex;
-      }
+    }
+
+    .title{
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 1023px){
@@ -9,6 +13,10 @@
         display: grid;
         grid-gap: 10px;
         place-self: center;
+    }
+
+    .title{
+        font-size: 28px;
     }
 
     .wrapper {
@@ -37,7 +45,6 @@
 .title {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 30px;
     color: #4793FF;
 }
 
